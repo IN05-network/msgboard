@@ -1,0 +1,118 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+  height: 100%;
+}
+body, body * {
+  box-sizing : border-box;
+  display: flex;
+}
+
+.App {
+  width: 100vw;
+}
+
+header > p {
+  flex: 1;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.outer-container {
+  flex: 1;
+  flex-direction: column;
+}
+
+.App-container {
+  background-color: #282c34;
+  flex: 1 1;
+  flex-direction: column;
+  color: white;
+  overflow: auto;
+}
+
+.setup-instructions {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.setup-instructions > button {
+  padding: 6px 8px;
+}
+
+.message-container {
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+}
+
+.message {
+  /* flex: 1; */
+  border: solid 1px #757575;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  width: -webkit-fill-available;
+  margin: 0 20px;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.message > .identicon {
+  height: 42px;
+  line-height: 22px;
+  margin: 20px;
+  padding: 10px;
+  background-color: #464646;
+  border-radius: 100px;
+}
+
+.message > pre {
+  text-wrap: wrap;
+}
+
+.message.message-pending {
+  background: #4d5264;
+}
+
+.message-input {
+  flex-direction: column;
+  margin: 0 20px;
+}
+
+.new-message-textarea {
+  margin: 20px;
+  border-radius: 6px;
+  padding: 6px;
+  background: #515151;
+  color: white;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.new-message-button {
+  all: unset;
+  outline: revert;
+  margin: auto;
+  border-radius: 20px;
+  height: 33px;
+  width: 28px;
+  padding-left: 6px;
+  background: #352ece;
+}
+
+textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  /*remove the resize handle on the bottom right*/
+  resize: none;
+}
