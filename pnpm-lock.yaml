@@ -8,12 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@sentry/browser':
+        specifier: ^7.11.1
+        version: 7.120.3
       '@sentry/react':
         specifier: ^7.11.1
         version: 7.120.3(react@18.3.1)
-      '@sentry/tracing':
-        specifier: ^7.11.1
-        version: 7.120.3
       '@testing-library/jest-dom':
         specifier: ^5.16.5
         version: 5.17.0
@@ -1125,10 +1125,6 @@ packages:
   '@sentry/replay@7.120.3':
     resolution: {integrity: sha512-CjVq1fP6bpDiX8VQxudD5MPWwatfXk8EJ2jQhJTcWu/4bCSOQmHxnnmBM+GVn5acKUBCodWHBN+IUZgnJheZSg==}
     engines: {node: '>=12'}
-
-  '@sentry/tracing@7.120.3':
-    resolution: {integrity: sha512-B7bqyYFgHuab1Pn7w5KXsZP/nfFo4VDBDdSXDSWYk5+TYJ3IDruO3eJFhOrircfsz4YwazWm9kbeZhkpsHDyHg==}
-    engines: {node: '>=8'}
 
   '@sentry/types@7.120.3':
     resolution: {integrity: sha512-C4z+3kGWNFJ303FC+FxAd4KkHvxpNFYAFN8iMIgBwJdpIl25KZ8Q/VdGn0MLLUEHNLvjob0+wvwlcRBBNLXOow==}
@@ -7102,10 +7098,6 @@ snapshots:
       '@sentry/core': 7.120.3
       '@sentry/types': 7.120.3
       '@sentry/utils': 7.120.3
-
-  '@sentry/tracing@7.120.3':
-    dependencies:
-      '@sentry-internal/tracing': 7.120.3
 
   '@sentry/types@7.120.3': {}
 
