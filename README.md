@@ -1,8 +1,8 @@
-### nfc-bbs
+### in05 message board
 
 demo webapp for NFC based local-only messageboard.
 
-Compat: only works on chrome browser for android. `:(`
+Compat: only works on chrome browser for android.
 see compat table: https://caniuse.com/webnfc
 
 ### message board reading instructions
@@ -18,7 +18,7 @@ to read a messageboard that has been setup:
 to setup a new messageboard on a passive nfc device:
 - need high storage capacity passive NFC devices (as much as possible, aim for at least ~1kB)
 - ensure phone has NFC and is enabled
-- visit the webapp https://neila.github.io/nfc-bbs/
+- visit the webapp https://in05-network.github.io/msgboard/
 - click button (if present) and approve enable nfc permission
 - touch phone to nfc. nfc must be away from other nfcs, must be flat, etc
 - first touch will "install" the messageboard to the nfc (just adds link to webapp)

@@ -34,6 +34,8 @@ jobs:
         run: pnpm install
       - name: build page
         run: pnpm build
+        env:
+          CI: false
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./build/
