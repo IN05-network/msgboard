@@ -128,7 +128,7 @@ function App() {
             { nfcSupported && nfcPermissionStatus === 'prompt' && renderPrompt()}
             { nfcSupported && nfcPermissionStatus === 'granted' && renderPleaseScan()}
             { nfcSupported && nfcPermissionStatus === 'denied' && renderDenied()}
-            {/* { nfcSupported && nfcError && nfcError.toString()} */}
+            { nfcSupported && nfcError && nfcError.toString()}
           </div>
         </main>
       )
@@ -175,6 +175,7 @@ function App() {
       <>
         <p>NFC not supported</p>
         <button onClick={startDemo}>try demo</button>
+        <button onClick={() => {throw new Error("Error.");}}>Error button</button>
       </>
     )
   }

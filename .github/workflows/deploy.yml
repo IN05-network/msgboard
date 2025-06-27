@@ -18,6 +18,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     steps:
       - uses: actions/checkout@v4
       - name: Install pnpm
@@ -36,6 +38,7 @@ jobs:
         run: pnpm build
         env:
           CI: false
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./build/

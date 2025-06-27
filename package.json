@@ -4,8 +4,8 @@
   "homepage": "https://in05-network.github.io/msgboard",
   "private": true,
   "dependencies": {
-    "@sentry/react": "^7.11.1",
-    "@sentry/browser": "^7.11.1",
+    "@sentry/cli": "^2.46.0",
+    "@sentry/react": "^9.33.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -18,9 +18,10 @@
     "predeploy": "pnpm run build",
     "deploy": "gh-pages -d build",
     "start": "HTTPS=true react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && pnpm sentry:sourcemaps",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org neila-n0 --project javascript-react ./build && sentry-cli sourcemaps upload --org neila-n0 --project javascript-react ./build"
   },
   "eslintConfig": {
     "extends": [

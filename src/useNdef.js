@@ -35,16 +35,16 @@ export default function useNdef ({ onWriteSuccess }) {
     (async () => {
       if (!supported) return;
       if (permissionStatus !== 'granted') return;
-      // const ndef = new window.NDEFReader();
+      const ndef = new window.NDEFReader();
       ndef.addEventListener('reading', onReading);
       ndef.addEventListener('readingerror', onReadingError);
-      // while (true) {
+      while (true) {
         try {
           await ndef.scan();
         } catch (err) {
           setError(err);
         }
-      // }
+      }
     })()
   }, [supported, permissionStatus, pendingRecords]);
 
@@ -55,7 +55,7 @@ export default function useNdef ({ onWriteSuccess }) {
         if (!supported) return;
         if (permissionStatus !== 'granted') return;
         if (!pendingRecords) return;
-        // const ndef = new window.NDEFReader();
+        const ndef = new window.NDEFReader();
         await ndef.write({
           records: pendingRecords,
         }, {
@@ -79,7 +79,7 @@ export default function useNdef ({ onWriteSuccess }) {
   }
 
   function promptNdef (event) {
-    // const ndef = new window.NDEFReader();
+    const ndef = new window.NDEFReader();
     // trigger permissions prompt
     ndef.scan().then(() => {});
   }
